@@ -42,3 +42,4 @@ new BucketDeployment(stack, "JSCC-Bucket-Deployment", {
     distributionPaths: ["/*"]
 });
 
+app.synth();
