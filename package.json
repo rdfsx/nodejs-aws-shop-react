@@ -1,5 +1,6 @@
 {
   "name": "my-store-app",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -10,7 +11,8 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest run --coverage",
     "lint": "eslint --ignore-path .gitignore --fix src",
-    "prettier": "prettier src --write"
+    "prettier": "prettier src --write",
+    "deploy": "cdk synth && cdk bootstrap && cdk deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.9.3",
@@ -19,6 +21,7 @@
     "@mui/material": "^5.8.7",
     "@mui/styles": "^5.8.7",
     "@types/yup": "^0.29.14",
+    "aws-cdk-lib": "^2.103.1",
     "axios": "^0.27.2",
     "formik": "^2.2.9",
     "react": "^18.2.0",
